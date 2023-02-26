@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<title> Task-3</title>
+<head>
+  <style type="text/css">
+      body{
+          background-color: #000000;
+          background-image:url("temp5.jpeg");
+          background-position: center;
+          background-repeat:no-repeat;
+          background-attachment: fixed;
+          background-size:cover;
+      }
+</style>
+</head>
+<body>
+<section style="margin:250px";>
+  <center>
+<h2>Temperature Converter</h2>
+
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+
+<script>
+function temperatureConverter(valNum) 
+{
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+}
+</script>
+</center>
+</section>
+</body>
+</html>
